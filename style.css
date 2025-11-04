@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    top: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:white;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #4ade80;
+    background-color: rgba(74, 222, 128, 0.1);
+}
+
+/* BANNER */ 
+.banner {
+    background-color:#1a472a;
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4ade80;
+    color: #1a472a;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* DIV SOBRE */
+.sobre {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    color: #1a472a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* DIV PRODUTOS */
+.produtos-div {
+    padding: 4rem 0;
+}
+
+.produtos-div h2 {
+    font-size: 2rem;
+    color: #1a472a;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.produto-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.produto-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.produto-card h3 {
+    color: #1a472a;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.produto-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* DIV CONTATO */
+.contato-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.contato-div h2 {
+    font-size: 2rem;
+    color: #1a472a;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #1a472a;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav {
+        gap: 1rem;
+    }
+    
+    .banner {
+        padding: 4rem 0;
+    }
+    
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    nav a {
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
